@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L23-Hz-jlW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="aob-MM-vMS">
+            <objects>
+                <viewController id="L23-Hz-jlW" customClass="IntroViewController" customModule="coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQK-VI-41P"/>
+                        <viewControllerLayoutGuide type="bottom" id="YlF-wH-Y8d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHT-2w-6OR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTa-PS-TwU">
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee Mug, Steam, and Background Square.png" translatesAutoresizingMaskIntoConstraints="NO" id="HOJ-Pi-R2V">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="Qna-AD-kPy"/>
+                                            <constraint firstAttribute="height" constant="189" id="yGk-b0-Oe3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CSi-Hs-Zh9" appends="YES" id="poR-L2-0y2"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5iM-ox-2jI">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Uss-Jw-Zsh"/>
+                                            <constraint firstAttribute="width" constant="228" id="tum-iC-OuM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55294117647058827" green="0.43137254901960786" blue="0.38823529411764707" alpha="0.267578125" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HOJ-Pi-R2V" firstAttribute="top" secondItem="5iM-ox-2jI" secondAttribute="bottom" constant="49" id="4dI-MB-i2K"/>
+                                    <constraint firstItem="5iM-ox-2jI" firstAttribute="top" secondItem="oTa-PS-TwU" secondAttribute="top" constant="230" id="UbL-dy-Afd"/>
+                                    <constraint firstItem="HOJ-Pi-R2V" firstAttribute="centerX" secondItem="oTa-PS-TwU" secondAttribute="centerX" id="bvx-c1-HEj"/>
+                                    <constraint firstItem="5iM-ox-2jI" firstAttribute="centerX" secondItem="oTa-PS-TwU" secondAttribute="centerX" id="y6t-X4-4Jz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTa-PS-TwU" firstAttribute="top" secondItem="pHT-2w-6OR" secondAttribute="top" id="F2l-qd-KPF"/>
+                            <constraint firstItem="YlF-wH-Y8d" firstAttribute="top" secondItem="oTa-PS-TwU" secondAttribute="bottom" id="TdQ-b8-zNC"/>
+                            <constraint firstAttribute="trailing" secondItem="oTa-PS-TwU" secondAttribute="trailing" id="arm-ba-4hO"/>
+                            <constraint firstItem="oTa-PS-TwU" firstAttribute="leading" secondItem="pHT-2w-6OR" secondAttribute="leading" id="yTZ-F7-dKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToMap" id="ZYV-t8-i7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epn-dn-RqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CSi-Hs-Zh9">
+                    <connections>
+                        <action selector="goToMap:" destination="L23-Hz-jlW" id="TAM-pw-LhK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-520.28985507246375" y="-244.56521739130437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-FB-EtL"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1IL-FB-EtL" secondAttribute="trailing" id="36B-4g-cg4"/>
+                            <constraint firstItem="1IL-FB-EtL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Ok-AI-Xeg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1IL-FB-EtL" secondAttribute="bottom" id="RJU-hI-a1v"/>
+                            <constraint firstItem="1IL-FB-EtL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eag-nf-uf2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="1IL-FB-EtL" id="rgM-ME-gn9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="-245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Coffee Mug, Steam, and Background Square.png" width="356" height="394"/>
+        <image name="Logo.png" width="189" height="32"/>
+    </resources>
+</document>
