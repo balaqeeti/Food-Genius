@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L23-Hz-jlW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="aob-MM-vMS">
+            <objects>
+                <viewController id="L23-Hz-jlW" customClass="IntroViewController" customModule="coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQK-VI-41P"/>
+                        <viewControllerLayoutGuide type="bottom" id="YlF-wH-Y8d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHT-2w-6OR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTa-PS-TwU">
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee Mug, Steam, and Background Square.png" translatesAutoresizingMaskIntoConstraints="NO" id="HOJ-Pi-R2V">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="Qna-AD-kPy"/>
+                                            <constraint firstAttribute="height" constant="189" id="yGk-b0-Oe3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CSi-Hs-Zh9" appends="YES" id="poR-L2-0y2"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5iM-ox-2jI">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Uss-Jw-Zsh"/>
+                                            <constraint firstAttribute="width" constant="228" id="tum-iC-OuM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAX-xI-m0q">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="554-eE-DS5"/>
+                                            <constraint firstAttribute="width" constant="192" id="gKv-vl-QUS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="Craving Somthing Else?">
+                                            <color key="titleColor" red="0.63080828353233143" green="0.512109721595565" blue="0.47025205271835246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="sXW-UP-oHz" kind="show" id="u78-GW-P3u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55294117647058827" green="0.43137254901960786" blue="0.38823529411764707" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HOJ-Pi-R2V" firstAttribute="top" secondItem="5iM-ox-2jI" secondAttribute="bottom" constant="49" id="4dI-MB-i2K"/>
+                                    <constraint firstAttribute="bottom" secondItem="SAX-xI-m0q" secondAttribute="bottom" constant="37" id="8KB-gH-wH4"/>
+                                    <constraint firstItem="5iM-ox-2jI" firstAttribute="top" secondItem="oTa-PS-TwU" secondAttribute="top" constant="230" id="UbL-dy-Afd"/>
+                                    <constraint firstItem="SAX-xI-m0q" firstAttribute="centerX" secondItem="oTa-PS-TwU" secondAttribute="centerX" id="aKx-Ha-yCq"/>
+                                    <constraint firstItem="HOJ-Pi-R2V" firstAttribute="centerX" secondItem="oTa-PS-TwU" secondAttribute="centerX" id="bvx-c1-HEj"/>
+                                    <constraint firstItem="5iM-ox-2jI" firstAttribute="centerX" secondItem="oTa-PS-TwU" secondAttribute="centerX" id="y6t-X4-4Jz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTa-PS-TwU" firstAttribute="top" secondItem="pHT-2w-6OR" secondAttribute="top" id="F2l-qd-KPF"/>
+                            <constraint firstItem="YlF-wH-Y8d" firstAttribute="top" secondItem="oTa-PS-TwU" secondAttribute="bottom" id="TdQ-b8-zNC"/>
+                            <constraint firstAttribute="trailing" secondItem="oTa-PS-TwU" secondAttribute="trailing" id="arm-ba-4hO"/>
+                            <constraint firstItem="oTa-PS-TwU" firstAttribute="leading" secondItem="pHT-2w-6OR" secondAttribute="leading" id="yTZ-F7-dKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToMap" id="ZYV-t8-i7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epn-dn-RqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CSi-Hs-Zh9">
+                    <connections>
+                        <action selector="goToMap:" destination="L23-Hz-jlW" id="TAM-pw-LhK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-520.79999999999995" y="-245.12743628185908"/>
+        </scene>
+        <!--Speech Recognition View Controller-->
+        <scene sceneID="Rgn-sF-QPV">
+            <objects>
+                <viewController id="sXW-UP-oHz" customClass="SpeechRecognitionViewController" customModule="coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ucy-7s-nX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="o8f-la-09I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kd6-ln-IKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-oT-mcd">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuq-Z5-L0a" customClass="CircleButton" customModule="coffee" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.0" blue="0.035294117647058823" alpha="0.27000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="8JF-g6-7hC"/>
+                                            <constraint firstAttribute="height" constant="60" id="lz8-VC-SSr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="recordingButtonTapped:" destination="sXW-UP-oHz" eventType="touchUpInside" id="Zt0-t4-hCw"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-9m-hAx">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="82A-XP-pBp"/>
+                                            <constraint firstAttribute="height" constant="60" id="EaX-fy-fV9"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JBo-4U-G4T">
+                                        <color key="backgroundColor" red="0.55294117647058827" green="0.43137254901960786" blue="0.38823529411764707" alpha="0.27089576198630139" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="DRI-76-kCy"/>
+                                            <constraint firstAttribute="width" constant="240" id="a3z-Xh-1gi"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckBox" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-vU-lhe">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="APO-eA-sI6"/>
+                                            <constraint firstAttribute="width" constant="76" id="ySS-Tt-YwX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="OeB-97-1Y5" appends="YES" id="0Lm-Yb-Oos"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X-BOX" translatesAutoresizingMaskIntoConstraints="NO" id="05C-fq-vL3">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="9Ef-Gh-mgJ"/>
+                                            <constraint firstAttribute="width" constant="76" id="dDg-KH-CVI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="F5c-C6-Lwk" appends="YES" id="azh-Le-zIK"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="craving" translatesAutoresizingMaskIntoConstraints="NO" id="bao-Nd-txM">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dMB-Kr-O94"/>
+                                            <constraint firstAttribute="width" constant="288" id="khd-WH-jsL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55294117647058827" green="0.43137254901960786" blue="0.38823529411764707" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tNr-9m-hAx" firstAttribute="centerY" secondItem="7MQ-oT-mcd" secondAttribute="centerY" id="0yg-pL-Z51"/>
+                                    <constraint firstItem="yuq-Z5-L0a" firstAttribute="centerY" secondItem="7MQ-oT-mcd" secondAttribute="centerY" id="3yJ-ex-Db5"/>
+                                    <constraint firstAttribute="bottom" secondItem="05C-fq-vL3" secondAttribute="bottom" constant="8" id="5QO-2S-wqZ"/>
+                                    <constraint firstItem="fUn-vU-lhe" firstAttribute="leading" secondItem="7MQ-oT-mcd" secondAttribute="leading" constant="111" id="EFH-rN-ixD"/>
+                                    <constraint firstItem="JBo-4U-G4T" firstAttribute="top" secondItem="tNr-9m-hAx" secondAttribute="bottom" constant="90" id="Fp3-xd-qbt"/>
+                                    <constraint firstItem="JBo-4U-G4T" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="acR-cV-Qu8"/>
+                                    <constraint firstAttribute="bottom" secondItem="fUn-vU-lhe" secondAttribute="bottom" constant="8" id="d2G-7t-lN0"/>
+                                    <constraint firstItem="yuq-Z5-L0a" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="fcD-KA-bMf"/>
+                                    <constraint firstAttribute="trailing" secondItem="05C-fq-vL3" secondAttribute="trailing" constant="104" id="o9m-BQ-b6a"/>
+                                    <constraint firstItem="tNr-9m-hAx" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="qpN-03-hFs"/>
+                                    <constraint firstItem="yuq-Z5-L0a" firstAttribute="top" secondItem="bao-Nd-txM" secondAttribute="bottom" constant="35" id="rP5-9E-Fl7"/>
+                                    <constraint firstItem="bao-Nd-txM" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="rRV-LY-HOx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7MQ-oT-mcd" firstAttribute="leading" secondItem="Kd6-ln-IKl" secondAttribute="leading" id="D1K-9Z-8mN"/>
+                            <constraint firstAttribute="trailing" secondItem="7MQ-oT-mcd" secondAttribute="trailing" id="KpM-HC-J0V"/>
+                            <constraint firstItem="o8f-la-09I" firstAttribute="top" secondItem="7MQ-oT-mcd" secondAttribute="bottom" id="Njm-ag-Elf"/>
+                            <constraint firstItem="7MQ-oT-mcd" firstAttribute="top" secondItem="Kd6-ln-IKl" secondAttribute="top" id="Prg-D5-eFa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="tNr-9m-hAx" id="Zyw-C9-9gS"/>
+                        <outlet property="checkmarkDisplay" destination="fUn-vU-lhe" id="Jvr-Jm-v9y"/>
+                        <outlet property="transcriptionText" destination="JBo-4U-G4T" id="jLD-j2-MVZ"/>
+                        <outlet property="xBoxDisplay" destination="05C-fq-vL3" id="lRf-gR-agL"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToMap" id="pBd-4z-Byf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hb-Je-tf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OeB-97-1Y5">
+                    <connections>
+                        <action selector="checkmarkTapped:" destination="sXW-UP-oHz" id="JgM-mw-0gt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="F5c-C6-Lwk">
+                    <connections>
+                        <action selector="xBoxTapped:" destination="sXW-UP-oHz" id="aby-bU-Mi5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-520.5" y="443.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-FB-EtL"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBC-gR-snK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="bKH-Kx-Tvm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Want something else?">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sXW-UP-oHz" kind="show" id="UuH-Hn-jBs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1IL-FB-EtL" secondAttribute="trailing" id="36B-4g-cg4"/>
+                            <constraint firstItem="1IL-FB-EtL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Ok-AI-Xeg"/>
+                            <constraint firstAttribute="trailing" secondItem="XBC-gR-snK" secondAttribute="trailing" id="9LK-Em-1RH"/>
+                            <constraint firstItem="XBC-gR-snK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YaD-QE-UsO"/>
+                            <constraint firstItem="1IL-FB-EtL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eag-nf-uf2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XBC-gR-snK" secondAttribute="bottom" id="vIH-ay-AiW"/>
+                            <constraint firstItem="XBC-gR-snK" firstAttribute="top" secondItem="1IL-FB-EtL" secondAttribute="bottom" id="yxR-i4-bly"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="1IL-FB-EtL" id="rgM-ME-gn9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349.60000000000002" y="-245.12743628185908"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CheckBox" width="262" height="256"/>
+        <image name="Coffee Mug, Steam, and Background Square.png" width="356" height="394"/>
+        <image name="Logo.png" width="189" height="32"/>
+        <image name="X-BOX" width="262" height="256"/>
+        <image name="craving" width="364" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="u78-GW-P3u"/>
+        <segue reference="ZYV-t8-i7C"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -9,17 +9,15 @@
 /* Begin PBXBuildFile section */
 		8442D72A1DC1AC10004CFD6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D7291DC1AC10004CFD6B /* AppDelegate.swift */; };
 		8442D72C1DC1AC10004CFD6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D72B1DC1AC10004CFD6B /* ViewController.swift */; };
-		8442D72F1DC1AC10004CFD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442D72D1DC1AC10004CFD6B /* Main.storyboard */; };
 		8442D7311DC1AC10004CFD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7301DC1AC10004CFD6B /* Assets.xcassets */; };
 		8442D7341DC1AC10004CFD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7321DC1AC10004CFD6B /* LaunchScreen.storyboard */; };
 		8442D73C1DC26D4E004CFD6B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442D73B1DC26D4E004CFD6B /* MapKit.framework */; };
 		8442D7401DC28876004CFD6B /* Cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D73F1DC28876004CFD6B /* Cafes.swift */; };
 		8442D7421DC2C04A004CFD6B /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */; };
-		8442D7461DC68CB2004CFD6B /* coffee-intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7451DC68CB2004CFD6B /* coffee-intro.png */; };
-		8442D7481DC68D62004CFD6B /* Find Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7471DC68D62004CFD6B /* Find Coffee.png */; };
-		8442D74A1DC68D8A004CFD6B /* Coffee Mug, Steam, and Background Square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7491DC68D8A004CFD6B /* Coffee Mug, Steam, and Background Square.png */; };
-		8442D74C1DC68E77004CFD6B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8442D74B1DC68E77004CFD6B /* Logo.png */; };
 		8442D74E1DC68FD1004CFD6B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D74D1DC68FD1004CFD6B /* IntroViewController.swift */; };
+		846889C41DC9A92800965BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846889C31DC9A92800965BB1 /* Main.storyboard */; };
+		84F4A8231DC94B00009B8EC9 /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */; };
+		84F4A8261DC97CB3009B8EC9 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4A8251DC97CB3009B8EC9 /* CircleButton.swift */; };
 		EE880D6D3661FC701208E3D8 /* Pods_coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B04800066CB7D2B18AF268A /* Pods_coffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,18 +26,16 @@
 		8442D7261DC1AC10004CFD6B /* coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442D7291DC1AC10004CFD6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8442D72B1DC1AC10004CFD6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8442D72E1DC1AC10004CFD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8442D7301DC1AC10004CFD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8442D7331DC1AC10004CFD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8442D7351DC1AC10004CFD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442D73B1DC26D4E004CFD6B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8442D73F1DC28876004CFD6B /* Cafes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafes.swift; sourceTree = "<group>"; };
 		8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
-		8442D7451DC68CB2004CFD6B /* coffee-intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coffee-intro.png"; path = "../../../../Desktop/coffee-intro.png"; sourceTree = "<group>"; };
-		8442D7471DC68D62004CFD6B /* Find Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Find Coffee.png"; path = "../../../../Desktop/Find Coffee.png"; sourceTree = "<group>"; };
-		8442D7491DC68D8A004CFD6B /* Coffee Mug, Steam, and Background Square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Coffee Mug, Steam, and Background Square.png"; path = "../../../../Desktop/Coffee Mug, Steam, and Background Square.png"; sourceTree = "<group>"; };
-		8442D74B1DC68E77004CFD6B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../../Desktop/Logo.png; sourceTree = "<group>"; };
 		8442D74D1DC68FD1004CFD6B /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		846889C31DC9A92800965BB1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
+		84F4A8251DC97CB3009B8EC9 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		88E789A4678E50EC26728772 /* Pods-coffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-coffee/Pods-coffee.release.xcconfig"; sourceTree = "<group>"; };
 		C712B29783BA41EC8DB68E34 /* Pods-coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coffee/Pods-coffee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,16 +83,14 @@
 		8442D7281DC1AC10004CFD6B /* coffee */ = {
 			isa = PBXGroup;
 			children = (
+				84F4A8241DC97C9F009B8EC9 /* View */,
 				8442D7431DC2C055004CFD6B /* Model */,
 				8442D7291DC1AC10004CFD6B /* AppDelegate.swift */,
 				8442D72B1DC1AC10004CFD6B /* ViewController.swift */,
 				8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */,
-				8442D72D1DC1AC10004CFD6B /* Main.storyboard */,
+				84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */,
+				846889C31DC9A92800965BB1 /* Main.storyboard */,
 				8442D7301DC1AC10004CFD6B /* Assets.xcassets */,
-				8442D7471DC68D62004CFD6B /* Find Coffee.png */,
-				8442D74B1DC68E77004CFD6B /* Logo.png */,
-				8442D7491DC68D8A004CFD6B /* Coffee Mug, Steam, and Background Square.png */,
-				8442D7451DC68CB2004CFD6B /* coffee-intro.png */,
 				8442D7321DC1AC10004CFD6B /* LaunchScreen.storyboard */,
 				8442D7351DC1AC10004CFD6B /* Info.plist */,
 				8442D74D1DC68FD1004CFD6B /* IntroViewController.swift */,
@@ -110,6 +104,14 @@
 				8442D73F1DC28876004CFD6B /* Cafes.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		84F4A8241DC97C9F009B8EC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84F4A8251DC97CB3009B8EC9 /* CircleButton.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		AF14AD0C126C6A4F6570D099 /* Frameworks */ = {
@@ -184,13 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8442D7461DC68CB2004CFD6B /* coffee-intro.png in Resources */,
-				8442D74C1DC68E77004CFD6B /* Logo.png in Resources */,
+				846889C41DC9A92800965BB1 /* Main.storyboard in Resources */,
 				8442D7341DC1AC10004CFD6B /* LaunchScreen.storyboard in Resources */,
-				8442D74A1DC68D8A004CFD6B /* Coffee Mug, Steam, and Background Square.png in Resources */,
-				8442D7481DC68D62004CFD6B /* Find Coffee.png in Resources */,
 				8442D7311DC1AC10004CFD6B /* Assets.xcassets in Resources */,
-				8442D72F1DC1AC10004CFD6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F4A8261DC97CB3009B8EC9 /* CircleButton.swift in Sources */,
 				8442D74E1DC68FD1004CFD6B /* IntroViewController.swift in Sources */,
 				8442D72C1DC1AC10004CFD6B /* ViewController.swift in Sources */,
 				8442D7421DC2C04A004CFD6B /* OpeningViewController.swift in Sources */,
 				8442D72A1DC1AC10004CFD6B /* AppDelegate.swift in Sources */,
+				84F4A8231DC94B00009B8EC9 /* SpeechRecognitionViewController.swift in Sources */,
 				8442D7401DC28876004CFD6B /* Cafes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,14 +260,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8442D72D1DC1AC10004CFD6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8442D72E1DC1AC10004CFD6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8442D7321DC1AC10004CFD6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,11 +372,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 23E573245P;
 				INFOPLIST_FILE = coffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jettraines.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -395,11 +390,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jett  Raines (2ZVZ893H56)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 23E573245P;
 				INFOPLIST_FILE = coffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jettraines.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

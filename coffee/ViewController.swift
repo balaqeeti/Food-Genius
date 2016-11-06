@@ -11,8 +11,11 @@ import Alamofire
 import MapKit
 
 
-
 class ViewController: UIViewController {
+    
+    var restaurantData: String!
+    var restaurantKeyword: String!
+    var restaurantType: String!
     
     var cafes = [ [String : CLLocationCoordinate2D] ]()
     var mkCafes: [Cafes] = []
@@ -29,8 +32,12 @@ class ViewController: UIViewController {
     
     typealias DownloadComplete = () -> ()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userSpeechHandling()
         
         mapView?.delegate = self
         
@@ -40,11 +47,29 @@ class ViewController: UIViewController {
         locationManager?.requestWhenInUseAuthorization()
         
         
+        
+
+    }
     
+    func userSpeechHandling() {
+        guard restaurantData != nil else {
+            print("JETT: No speech results were set, coffee is the default")
+            return
+        }
+        if let phrase = restaurantData {
+          let keywordArray = phrase.components(separatedBy: " ")
+          restaurantKeyword = keywordArray[0]
+          print("JETT: \(keywordArray[0])")
+        }
+        
+        
+        
+        
     }
 
 
 }
+
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let distance: CLLocationDistance = 10000.0
@@ -70,8 +95,16 @@ extension ViewController: MKMapViewDelegate {
     
     // Alamofire Get Restaurant JSON
     func getCoffeeShopData (userLocation: CLLocationCoordinate2D) {
-    
-        Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(userLocation.latitude),\(userLocation.longitude)&radius=5000&type=cafe&keyword=cafe&key=AIzaSyAL-xs06cyaLuDSvF9AHv7p05VKhyCxS7E").responseJSON { response in
+       
+        var type: String!
+        if restaurantKeyword == nil {
+            type = "cafe"
+            restaurantKeyword = "cafe"
+        } else {
+            type = "restaurant"
+        }
+        
+        Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(userLocation.latitude),\(userLocation.longitude)&radius=5000&type=\(type!)&keyword=\(restaurantKeyword!)&key=AIzaSyAL-xs06cyaLuDSvF9AHv7p05VKhyCxS7E").responseJSON { response in
     print(response.request)  // original URL request
     print(response.response) // HTTP URL response
     print(response.data)     // server data
