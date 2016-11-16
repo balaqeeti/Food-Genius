@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var startLocation: CLLocation?
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     
     
     var userLocationIsSet: Bool!
@@ -36,6 +37,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activitySpinner.isHidden = false
+        activitySpinner.startAnimating()
+
+        
         
         userSpeechHandling()
         
@@ -67,23 +72,47 @@ class ViewController: UIViewController {
         
     }
 
+    
+    
+    
 
 }
 
 extension ViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
+        
+        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
+            annotationView.annotation = annotation
+            return annotationView
+        } else {
+            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier: "")
+            annotationView.isEnabled = true
+            annotationView.canShowCallout = true
+            
+            let btn = UIButton(type: .detailDisclosure)
+            annotationView.pinTintColor = UIColor.blue
+            annotationView.rightCalloutAccessoryView = btn
+            return annotationView
+        }
+    }
+    
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let distance: CLLocationDistance = 10000.0
         let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, distance, distance)
         mapView.setRegion(region, animated: true)
 
+
         if userLocationIsSet == nil || userLocationIsSet == false {
             getCoffeeShopData(userLocation: userLocation.coordinate)
         }
-       // mapView.addAnnotation(cafes as! MKAnnotation)
         userLocationIsSet = true;
         
         if cafeDataIsSet == true {
             print("JETT RAINES: \(mkCafes)")
+            activitySpinner.stopAnimating()
+            activitySpinner.isHidden = true
             mapView.addAnnotations(mkCafes)
             
             cafeDataIsSet = false
@@ -92,6 +121,23 @@ extension ViewController: MKMapViewDelegate {
 
         
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let restaurant = view.annotation?.title {
+            if let searchableRestaurant = restaurant?.replacingOccurrences(of: " ", with: "+") {
+            print("Jett: The button was tapped! \(searchableRestaurant)")
+            if let url = URL(string: "http://maps.apple.com/?q=\(searchableRestaurant)") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+                
+        }
+            
+    }
+        
+        
+    }
+    // When user clicks on annotation -> Send them to Map View
+
     
     // Alamofire Get Restaurant JSON
     func getCoffeeShopData (userLocation: CLLocationCoordinate2D) {
@@ -150,6 +196,7 @@ extension ViewController: MKMapViewDelegate {
     
     
 }
+
     
 }
 extension ViewController: CLLocationManagerDelegate {

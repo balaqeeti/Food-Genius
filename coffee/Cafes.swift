@@ -41,5 +41,5 @@ extension Cafes: MKAnnotation {
             return ""
         }
     }
-    
+
 }

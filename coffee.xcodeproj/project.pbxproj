@@ -13,7 +13,6 @@
 		8442D7341DC1AC10004CFD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442D7321DC1AC10004CFD6B /* LaunchScreen.storyboard */; };
 		8442D73C1DC26D4E004CFD6B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442D73B1DC26D4E004CFD6B /* MapKit.framework */; };
 		8442D7401DC28876004CFD6B /* Cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D73F1DC28876004CFD6B /* Cafes.swift */; };
-		8442D7421DC2C04A004CFD6B /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */; };
 		8442D74E1DC68FD1004CFD6B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D74D1DC68FD1004CFD6B /* IntroViewController.swift */; };
 		846889C41DC9A92800965BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846889C31DC9A92800965BB1 /* Main.storyboard */; };
 		84F4A8231DC94B00009B8EC9 /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */; };
@@ -31,7 +30,6 @@
 		8442D7351DC1AC10004CFD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442D73B1DC26D4E004CFD6B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8442D73F1DC28876004CFD6B /* Cafes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafes.swift; sourceTree = "<group>"; };
-		8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		8442D74D1DC68FD1004CFD6B /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		846889C31DC9A92800965BB1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				8442D7431DC2C055004CFD6B /* Model */,
 				8442D7291DC1AC10004CFD6B /* AppDelegate.swift */,
 				8442D72B1DC1AC10004CFD6B /* ViewController.swift */,
-				8442D7411DC2C04A004CFD6B /* OpeningViewController.swift */,
 				84F4A8221DC94B00009B8EC9 /* SpeechRecognitionViewController.swift */,
 				846889C31DC9A92800965BB1 /* Main.storyboard */,
 				8442D7301DC1AC10004CFD6B /* Assets.xcassets */,
@@ -250,7 +247,6 @@
 				84F4A8261DC97CB3009B8EC9 /* CircleButton.swift in Sources */,
 				8442D74E1DC68FD1004CFD6B /* IntroViewController.swift in Sources */,
 				8442D72C1DC1AC10004CFD6B /* ViewController.swift in Sources */,
-				8442D7421DC2C04A004CFD6B /* OpeningViewController.swift in Sources */,
 				8442D72A1DC1AC10004CFD6B /* AppDelegate.swift in Sources */,
 				84F4A8231DC94B00009B8EC9 /* SpeechRecognitionViewController.swift in Sources */,
 				8442D7401DC28876004CFD6B /* Cafes.swift in Sources */,
@@ -376,6 +372,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 23E573245P;
 				INFOPLIST_FILE = coffee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jettraines.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,6 +391,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 23E573245P;
 				INFOPLIST_FILE = coffee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jettraines.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";

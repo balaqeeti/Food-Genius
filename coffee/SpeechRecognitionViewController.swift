@@ -126,6 +126,9 @@ class SpeechRecognitionViewController: UIViewController {
         node.removeTap(onBus: 0)
         activitySpinner.stopAnimating()
         activitySpinner.isHidden = true
+        checkmarkDisplay.isHidden = true
+        xBoxDisplay.isHidden = true
+        transcriptionText.isHidden = true
         
         
     }

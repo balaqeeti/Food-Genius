@@ -46,8 +46,8 @@
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>We want to hear your voice, so we can show you what you need!</string>
+	<string>This allows me to understand your voice so I can respond appropriately.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>We want to hear you speak your mind!</string>
+	<string>This allows me to hear your voice so I can give you data.</string>
 </dict>
 </plist>
