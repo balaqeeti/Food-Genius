@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
-    
+    @IBOutlet weak var tipsView: UIImageView!
     
     var userLocationIsSet: Bool!
     var cafeDataIsSet = false
@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tipsView.isHidden = true
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
 
@@ -70,6 +71,14 @@ class ViewController: UIViewController {
         
         
         
+    }
+    
+    @IBAction func tipsViewHandler() {
+        if tipsView.isHidden {
+            tipsView.isHidden = false
+        } else {
+            tipsView.isHidden = true
+        }
     }
 
     
@@ -126,7 +135,7 @@ extension ViewController: MKMapViewDelegate {
         if let restaurant = view.annotation?.title {
             if let searchableRestaurant = restaurant?.replacingOccurrences(of: " ", with: "+") {
             print("Jett: The button was tapped! \(searchableRestaurant)")
-            if let url = URL(string: "http://maps.apple.com/?q=\(searchableRestaurant)") {
+            if let url = URL(string: "http://maps.apple.com/maps?saddr=Current%20Location?q=\(searchableRestaurant)") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
                 

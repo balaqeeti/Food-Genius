@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sXW-UP-oHz">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TFZ-1i-fcH">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="7ta-gp-YL7">
+            <objects>
+                <viewController id="TFZ-1i-fcH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GpA-tG-MaT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eWC-os-elp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W1x-pV-tAX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="TTp-Vt-fkg">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiP-Oa-Ep2">
+                                <rect key="frame" x="346" y="975" width="76" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="L3y-4C-4de"/>
+                                    <constraint firstAttribute="width" constant="76" id="pnn-Fo-Eal"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Got it!">
+                                    <color key="titleColor" red="0.0" green="0.89803921568627454" blue="1" alpha="0.73568600171232867" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sXW-UP-oHz" kind="showDetail" action="showViewController:sender:" id="54i-c7-oQ0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWC-os-elp" firstAttribute="top" secondItem="TTp-Vt-fkg" secondAttribute="bottom" id="3ba-UY-ctD"/>
+                            <constraint firstItem="TTp-Vt-fkg" firstAttribute="top" secondItem="W1x-pV-tAX" secondAttribute="top" id="7tm-Aw-ScX"/>
+                            <constraint firstItem="eWC-os-elp" firstAttribute="top" secondItem="DiP-Oa-Ep2" secondAttribute="bottom" constant="8" id="Ik4-Le-cvb"/>
+                            <constraint firstAttribute="trailing" secondItem="TTp-Vt-fkg" secondAttribute="trailing" id="JVz-pQ-DMS"/>
+                            <constraint firstItem="TTp-Vt-fkg" firstAttribute="leading" secondItem="W1x-pV-tAX" secondAttribute="leading" id="XOI-SU-Ouy"/>
+                            <constraint firstItem="DiP-Oa-Ep2" firstAttribute="centerX" secondItem="W1x-pV-tAX" secondAttribute="centerX" id="iL9-PG-hSR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bX1-8N-dVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234.7826086956522" y="-236.41304347826087"/>
+        </scene>
         <!--Speech Recognition View Controller-->
         <scene sceneID="Rgn-sF-QPV">
             <objects>
@@ -19,14 +64,14 @@
                         <viewControllerLayoutGuide type="bottom" id="o8f-la-09I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kd6-ln-IKl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-oT-mcd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuq-Z5-L0a" customClass="CircleButton" customModule="coffee" customModuleProvider="target">
-                                        <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                                        <rect key="frame" x="354.5" y="482.5" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.94117647058823528" green="0.0" blue="0.035294117647058823" alpha="0.27000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="8JF-g6-7hC"/>
@@ -42,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-9m-hAx">
-                                        <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                                        <rect key="frame" x="354.5" y="482.5" width="60" height="60"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="82A-XP-pBp"/>
@@ -50,7 +95,7 @@
                                         </constraints>
                                     </activityIndicatorView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JBo-4U-G4T">
-                                        <rect key="frame" x="67.5" y="453.5" width="240" height="128"/>
+                                        <rect key="frame" x="264.5" y="632.5" width="240" height="128"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="DRI-76-kCy"/>
@@ -60,49 +105,65 @@
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckBox-1" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-vU-lhe">
-                                        <rect key="frame" x="111" y="591" width="76" height="68"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="APO-eA-sI6"/>
-                                            <constraint firstAttribute="width" constant="76" id="ySS-Tt-YwX"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="OeB-97-1Y5" appends="YES" id="0Lm-Yb-Oos"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X-BOX-1" translatesAutoresizingMaskIntoConstraints="NO" id="05C-fq-vL3">
-                                        <rect key="frame" x="195" y="591" width="76" height="68"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="9Ef-Gh-mgJ"/>
-                                            <constraint firstAttribute="width" constant="76" id="dDg-KH-CVI"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="F5c-C6-Lwk" appends="YES" id="azh-Le-zIK"/>
-                                        </connections>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Robot Icon" translatesAutoresizingMaskIntoConstraints="NO" id="2gf-lb-fd3">
-                                        <rect key="frame" x="102.5" y="22" width="170" height="189"/>
+                                        <rect key="frame" x="299.5" y="56.5" width="170" height="189"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="3ex-UV-um6"/>
                                             <constraint firstAttribute="height" constant="189" id="D6Q-O3-B7v"/>
                                         </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NFl-Da-IEF">
+                                        <rect key="frame" x="300.5" y="948" width="167" height="68"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckBox-1" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-vU-lhe">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="68"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="68" id="APO-eA-sI6"/>
+                                                    <constraint firstAttribute="width" constant="76" id="ySS-Tt-YwX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="OeB-97-1Y5" appends="YES" id="0Lm-Yb-Oos"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X-BOX-1" translatesAutoresizingMaskIntoConstraints="NO" id="05C-fq-vL3">
+                                                <rect key="frame" x="91" y="0.0" width="76" height="68"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="68" id="9Ef-Gh-mgJ"/>
+                                                    <constraint firstAttribute="width" constant="76" id="dDg-KH-CVI"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="F5c-C6-Lwk" appends="YES" id="azh-Le-zIK"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info Button Copy" translatesAutoresizingMaskIntoConstraints="NO" id="xYW-uX-HLl">
+                                        <rect key="frame" x="16" y="32" width="24" height="24"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="hQi-dw-ecL"/>
+                                            <constraint firstAttribute="width" constant="24" id="mqe-uV-Sc1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jlP-WA-Zkj" appends="YES" id="HGW-g5-SU8"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.77839148029003269" green="1" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="1" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tNr-9m-hAx" firstAttribute="centerY" secondItem="7MQ-oT-mcd" secondAttribute="centerY" id="0yg-pL-Z51"/>
                                     <constraint firstItem="yuq-Z5-L0a" firstAttribute="centerY" secondItem="7MQ-oT-mcd" secondAttribute="centerY" id="3yJ-ex-Db5"/>
-                                    <constraint firstAttribute="bottom" secondItem="05C-fq-vL3" secondAttribute="bottom" constant="8" id="5QO-2S-wqZ"/>
-                                    <constraint firstItem="tNr-9m-hAx" firstAttribute="top" secondItem="2gf-lb-fd3" secondAttribute="bottom" constant="92.329999999999998" id="AUj-7Q-ohg"/>
-                                    <constraint firstItem="fUn-vU-lhe" firstAttribute="leading" secondItem="7MQ-oT-mcd" secondAttribute="leading" constant="111" id="EFH-rN-ixD"/>
+                                    <constraint firstItem="NFl-Da-IEF" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="6gz-Xn-g7c"/>
+                                    <constraint firstItem="xYW-uX-HLl" firstAttribute="leading" secondItem="7MQ-oT-mcd" secondAttribute="leading" constant="16" id="80S-eq-guO"/>
+                                    <constraint firstItem="xYW-uX-HLl" firstAttribute="top" secondItem="7MQ-oT-mcd" secondAttribute="top" constant="32" id="BwQ-E6-9BR"/>
                                     <constraint firstItem="JBo-4U-G4T" firstAttribute="top" secondItem="tNr-9m-hAx" secondAttribute="bottom" constant="90" id="Fp3-xd-qbt"/>
                                     <constraint firstItem="2gf-lb-fd3" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="NrL-cH-nJi"/>
+                                    <constraint firstItem="2gf-lb-fd3" firstAttribute="top" secondItem="7MQ-oT-mcd" secondAttribute="top" constant="56.329999999999998" id="PEW-LT-jWQ"/>
                                     <constraint firstItem="JBo-4U-G4T" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="acR-cV-Qu8"/>
-                                    <constraint firstAttribute="bottom" secondItem="fUn-vU-lhe" secondAttribute="bottom" constant="8" id="d2G-7t-lN0"/>
                                     <constraint firstItem="yuq-Z5-L0a" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="fcD-KA-bMf"/>
-                                    <constraint firstAttribute="trailing" secondItem="05C-fq-vL3" secondAttribute="trailing" constant="104" id="o9m-BQ-b6a"/>
+                                    <constraint firstAttribute="bottom" secondItem="NFl-Da-IEF" secondAttribute="bottom" constant="8" id="hen-GE-1zz"/>
                                     <constraint firstItem="tNr-9m-hAx" firstAttribute="centerX" secondItem="7MQ-oT-mcd" secondAttribute="centerX" id="qpN-03-hFs"/>
                                 </constraints>
                             </view>
@@ -134,8 +195,13 @@
                         <action selector="xBoxTapped:" destination="sXW-UP-oHz" id="aby-bU-Mi5"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="jlP-WA-Zkj">
+                    <connections>
+                        <segue destination="TFZ-1i-fcH" kind="showDetail" action="showViewController:sender:" id="S7x-TW-DmG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-426" y="-245"/>
+            <point key="canvasLocation" x="-426.08695652173918" y="-245.38043478260872"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -146,19 +212,19 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-FB-EtL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="593"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1292"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBC-gR-snK">
-                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <rect key="frame" x="75" y="1312" width="874" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="bKH-Kx-Tvm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Want something else?">
+                                <state key="normal" title="Ask again!">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -166,22 +232,39 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="957-yM-6WP">
-                                <rect key="frame" x="317" y="630" width="20" height="20"/>
+                                <rect key="frame" x="984" y="1329" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="DtV-4c-kba"/>
                                     <constraint firstAttribute="height" constant="20" id="mS1-Tj-s84"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Info Button Copy" translatesAutoresizingMaskIntoConstraints="NO" id="NI9-Ib-lje">
+                                <rect key="frame" x="20" y="697" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oRq-Id-4oe" appends="YES" id="dxe-o3-RIp"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tips-3" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-Fh-bEV">
+                                <rect key="frame" x="20" y="958" width="273" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="QR7-Hp-L1J"/>
+                                    <constraint firstAttribute="height" constant="346" id="pvu-l7-6J2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1IL-FB-EtL" secondAttribute="trailing" id="36B-4g-cg4"/>
                             <constraint firstItem="1IL-FB-EtL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Ok-AI-Xeg"/>
-                            <constraint firstAttribute="trailing" secondItem="XBC-gR-snK" secondAttribute="trailing" id="9LK-Em-1RH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="957-yM-6WP" secondAttribute="trailing" constant="22" id="Uu5-Jf-MFj"/>
-                            <constraint firstItem="XBC-gR-snK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YaD-QE-UsO"/>
+                            <constraint firstAttribute="trailing" secondItem="XBC-gR-snK" secondAttribute="trailing" constant="75" id="9LK-Em-1RH"/>
+                            <constraint firstItem="XBC-gR-snK" firstAttribute="top" secondItem="gJD-Fh-bEV" secondAttribute="bottom" constant="8" id="HCH-af-9RJ"/>
+                            <constraint firstItem="XBC-gR-snK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="YaD-QE-UsO"/>
                             <constraint firstItem="1IL-FB-EtL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eag-nf-uf2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="957-yM-6WP" secondAttribute="bottom" constant="17" id="qUs-Hx-9Nq"/>
+                            <constraint firstItem="gJD-Fh-bEV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sDt-bJ-F6I"/>
+                            <constraint firstItem="957-yM-6WP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uPV-yd-r06"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XBC-gR-snK" secondAttribute="bottom" id="vIH-ay-AiW"/>
                             <constraint firstItem="XBC-gR-snK" firstAttribute="top" secondItem="1IL-FB-EtL" secondAttribute="bottom" id="yxR-i4-bly"/>
                         </constraints>
@@ -189,16 +272,28 @@
                     <connections>
                         <outlet property="activitySpinner" destination="957-yM-6WP" id="Kc2-Mh-mHj"/>
                         <outlet property="mapView" destination="1IL-FB-EtL" id="rgM-ME-gn9"/>
+                        <outlet property="tipsView" destination="gJD-Fh-bEV" id="bXr-DO-daM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oRq-Id-4oe">
+                    <connections>
+                        <action selector="tipsViewHandler" destination="BYZ-38-t0r" id="MVG-gT-lat"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="349.60000000000002" y="-245.12743628185908"/>
+            <point key="canvasLocation" x="349.27536231884062" y="-245.38043478260872"/>
         </scene>
     </scenes>
     <resources>
         <image name="CheckBox-1" width="262" height="256"/>
+        <image name="Info Button Copy" width="26" height="26"/>
         <image name="Robot Icon" width="356" height="394"/>
+        <image name="Tips-3" width="546" height="692"/>
         <image name="X-BOX-1" width="262" height="256"/>
+        <image name="intro" width="1242" height="2208"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="54i-c7-oQ0"/>
+    </inferredMetricsTieBreakers>
 </document>

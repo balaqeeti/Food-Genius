@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Food Genius</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,13 +17,19 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.20</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>I want to stalk you</string>
+	<string>This allows me to give you local information.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This allows me to hear your voice so I can give you data.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This allows me to understand your voice so I can respond appropriately.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -43,11 +51,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>This allows me to understand your voice so I can respond appropriately.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This allows me to hear your voice so I can give you data.</string>
 </dict>
 </plist>
