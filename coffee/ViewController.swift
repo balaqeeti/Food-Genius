@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.isZoomEnabled = true
         tipsView.isHidden = true
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
@@ -150,7 +151,9 @@ extension ViewController: MKMapViewDelegate {
     
     // Alamofire Get Restaurant JSON
     func getCoffeeShopData (userLocation: CLLocationCoordinate2D) {
-       
+        if Thread.isMainThread {
+            print("Jett Raines: You are in trouble!")
+        }
         var type: String!
         if restaurantKeyword == nil {
             type = "cafe"
@@ -194,7 +197,7 @@ extension ViewController: MKMapViewDelegate {
                 }
             let newCafe = Cafes(name: cafeName!, latitude: (cafeLocation.latitude as? Double)!, longitude: (cafeLocation.longitude as Double?)!, cafeDescription: "haha")
             self.mkCafes.append(newCafe)
-            
+                    
             
             }
         }
